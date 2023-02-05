@@ -495,6 +495,34 @@ h6 {
   color: white;
 }
 
+.header-underline {
+  position: relative;
+  color: #7b8ea5;
+  text-decoration: none;
+}
+
+.header-underline:hover {
+  color: #7b8ea5;
+}
+
+.header-underline::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 80%;
+  height: 2px;
+  bottom: 4px;
+  left: 10%;
+  background-color: #7b8ea5;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.header-underline:hover::before {
+  transform: scaleX(1);
+}
+
+
 .text-link-underline {
   position: relative;
   color: #497ddb;
@@ -2507,6 +2535,16 @@ input {
   width: 100%;
   padding: 5px 0px;
 }
+
+.header-logo {
+  max-width: 150px;
+  width: 100%;
+  transition: filter 0.3s ease-in-out;
+}
+.header-logo:hover {
+  filter: drop-shadow(0 0 0.2rem rgba(255, 255, 255, 0.3  ))
+}
+
 .header .main-header .header-logo {
   max-width: 150px;
   width: 100%;
@@ -2638,6 +2676,19 @@ input {
   position: relative;
   text-align: left;
 }
+.header .main-menu li.home-btn > a::after {
+  font-family: uicons-regular-rounded !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1 !important;
+  font-size: 14px;
+  opacity: 1;
+  margin-left: 0px;
+  position: relative;
+  top: 2px;
+}
 .header .main-menu li.has-children > a::after {
   content: "\f151";
   font-family: uicons-regular-rounded !important;
@@ -2674,7 +2725,7 @@ input {
   position: relative;
 }
 .header .main-menu li a:hover, .header .main-menu li a.active {
-  color: #1CC2E7;
+  color: #1cc2e7;
 }
 .header .main-menu li a:hover i, .header .main-menu li a.active i {
   opacity: 1;
@@ -5455,6 +5506,8 @@ input {
   display: inline-block;
   vertical-align: middle;
 }
+
+
 
 .box-topics {
   border-radius: 8px;

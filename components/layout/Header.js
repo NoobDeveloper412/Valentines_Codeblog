@@ -23,49 +23,29 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
                         <div className="header-nav">
                             <nav className="nav-main-menu d-none d-xl-block">
                                 <ul className="main-menu">
-                                    <li className="has-children"><Link className="active" href="/">Home</Link>
+                                    <li className='home-btn header-underline'><Link className="active" href="/">Home</Link></li>
+                                    <li className="header-underline"><Link class="color-gray-500" href="/page-about">About Me </Link></li>
+                                    <li className="has-children header-underline"><Link className="color-gray-500" href="#">Code </Link>
                                         <ul className="sub-menu two-col">
-                                            <li><Link className="color-gray-500" href="/">Homepage - 1</Link></li>
-                                            <li><Link className="color-gray-500" href="/index-2">Homepage - 2</Link></li>
-                                            <li><Link className="color-gray-500" href="/index-3">Homepage - 3</Link></li>
-                                            <li><Link className="color-gray-500" href="/index-4">Homepage - 4</Link></li>
+                                            <li><Link className="color-gray-500" href="/blog-archive">Python</Link></li>
+                                            <li><Link className="color-gray-500" href="/blog-archive-2">JS</Link></li>
                                         </ul>
                                     </li>
-                                    <li className="has-children"><Link class="color-gray-500" href="/page-about">About Me</Link>
-                                        <ul className="sub-menu">
-                                            <li><Link className="color-gray-500" href="/page-portfolio">My Portfolio</Link></li>
-                                            <li><Link className="color-gray-500" href="/page-portfolio-2">My Portfolio 2</Link></li>
-                                            <li><Link className="color-gray-500" href="/portfolio-details">Portfolio Details</Link></li>
-                                        </ul>
-                                    </li>
-                                    <li className="has-children"><Link className="color-gray-500" href="#">Category</Link>
+                                    <li className="has-children header-underline"><Link className="color-gray-500" href="#">System </Link>
                                         <ul className="sub-menu two-col">
-                                            <li><Link className="color-gray-500" href="/blog-archive">Blog Category 1</Link></li>
-                                            <li><Link className="color-gray-500" href="/blog-archive-2">Blog Category 2</Link></li>
-                                            <li><Link className="color-gray-500" href="/blog-archive-3">Blog Category 3</Link></li>
-                                            <li><Link className="color-gray-500" href="/blog-archive-4">Blog Category 4</Link></li>
-                                            <li><Link className="color-gray-500" href="/blog-archive-5">Blog Category 5</Link></li>
-                                        </ul>
+                                            <li><Link className="color-gray-500" href="/single-sidebar">Linux</Link></li>
+                                            <li><Link className="color-gray-500" href="/single-no-sidebar">NVIDIA Jetson</Link></li>
+                                            <li><Link className="color-gray-500" href="/single-center">Windows</Link></li>
+                                        </ul>   
                                     </li>
-                                    <li className="has-children"><Link className="color-gray-500" href="#">Single Post</Link>
+                                    <li className="has-children header-underline"><Link className="color-gray-500" href="#">Articles </Link>
                                         <ul className="sub-menu two-col">
-                                            <li><Link className="color-gray-500" href="/single-sidebar">Blog Single 1</Link></li>
-                                            <li><Link className="color-gray-500" href="/single-no-sidebar">Blog Single 2</Link></li>
-                                            <li><Link className="color-gray-500" href="/single-center">Blog Single 3</Link></li>
+                                            <li><Link className="color-gray-500" href="/page-about">AI</Link></li>
+                                            <li><Link className="color-gray-500" href="/page-author">Software</Link></li>
+                                            <li><Link className="color-gray-500" href="/page-contact">Hardware</Link></li>
                                         </ul>
                                     </li>
-                                    <li className="has-children"><Link className="color-gray-500" href="#">Pages</Link>
-                                        <ul className="sub-menu two-col">
-                                            <li><Link className="color-gray-500" href="/page-about">About</Link></li>
-                                            <li><Link className="color-gray-500" href="/page-author">Author posts</Link></li>
-                                            <li><Link className="color-gray-500" href="/page-contact">Contact</Link></li>
-                                            <li><Link className="color-gray-500" href="/page-search">Search results</Link></li>
-                                            <li><Link className="color-gray-500" href="/page-login">Login</Link></li>
-                                            <li><Link className="color-gray-500" href="/page-signup">Signup</Link></li>
-                                            <li><Link className="color-gray-500" href="/page-404">Page 404</Link></li>
-                                        </ul>
-                                    </li>
-                                    <li><Link className="color-gray-500" href="/page-contact">Contact</Link></li>
+                                    <li className='header-underline'><Link className="color-gray-500" href="/page-contact">Contact</Link></li>
                                 </ul>
                             </nav>
                             <div className={`burger-icon burger-icon-white ${openClass && "burger-close"}`}

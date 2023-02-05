@@ -14,12 +14,12 @@ export default function Home() {
                             <div className="col-xl-10 col-lg-12">
                                 <div className="banner">
                                     <div className="row align-items-end">
-                                        <div className="col-lg-6 pt-100"><span className="text-sm-bold color-gray-600 wow animate__animated animate__fadeInUp">Qui suis-je ?</span>
+                                        <div className="col-lg-6 pt-100"><span className="text-sm-bold color-gray-600 wow animate__animated animate__fadeInUp">Who am I ?</span>
                                             <h2 className="color-gray-50 mt-20 mb-20 wow animate__animated animate__fadeInUp">
                                                 <Typewriter
                                                     options={{
                                                         wrapperClassName:"typewrite color-linear-2",
-                                                        strings: ['Valentin Cavarec', 'Développeur', 'Spécialisé en IA'],
+                                                        strings: ['Valentin Cavarec', 'Engineer', 'Junior AI Specialist'],
                                                         autoStart: true,
                                                         loop: true,
                                                     }}  
@@ -28,16 +28,16 @@ export default function Home() {
                                             <div className="row">
                                                 <div className="col-lg-9">
                                                     <p className="text-base color-gray-600 wow animate__animated animate__fadeInUp">
-                                                        Ingénieur Spécialisé en Intelligence Artificielle
-                                                        Actuellement CTO  @  <a class="text-sm-bold text-link-underline wow animate__animated animate__fadeInUp" href="https://seza.ai"><span class="color-white">Seza</span><span class="color-blue">ia</span></a>
+                                                        Engineer specialized in Artificial Intelligence <br/>
+                                                        Currently CTO  @  <a class="text-sm-bold text-link-underline wow animate__animated animate__fadeInUp" href="https://seza.ai"><span class="color-white">Seza</span><span class="color-blue">ia</span></a>
                                                     </p>
                                                 </div>
                                             </div>
                                             <div className="box-subscriber mt-40 mb-50 wow animate__animated animate__fadeInUp">
                                                 <div className="inner-subscriber bg-gray-800">
                                                     <form className="d-flex" action="#">
-                                                        <input className="input-sybscriber" type="text" placeholder="Votre adresse e-mail ..." />
-                                                        <button className="btn btn-linear-2 btn-arrow-right">S'abonner<i className="fi-rr-arrow-small-right" /></button>
+                                                        <input className="input-sybscriber" type="text" placeholder="Your e-mail address ..." />
+                                                        <button className="btn btn-linear-2 btn-arrow-right">Subscribe<i className="fi-rr-arrow-small-right" /></button>
                                                     </form>
                                                 </div>
                                             </div>
@@ -494,7 +494,7 @@ export default function Home() {
                                                 </div>
                                             </div>
                                             <div className="box-sidebar bg-gray-850 border-gray-800">
-                                                <div className="head-sidebar"><Link href="/"><img src="assets/imgs/template/logo.svg" alt="Genz" /></Link>
+                                                <div className="head-sidebar"><Link href="/"><img src="assets/imgs/template/logo.png" alt="Genz" /></Link>
                                                     <h6 className="color-gray-700">Follow us on instagram</h6>
                                                 </div>
                                                 <div className="content-sidebar">
