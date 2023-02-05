@@ -484,16 +484,45 @@ h6 {
 }
 
 .text-link-glow {
-  box-shadow: inset 0 0 0 0 #6b8dff;
-  color: #54b3d6;
+  box-shadow: inset 0 0 0 0 #ffffff;
+  color: #ffffff;
   margin: 0 -.25rem;
   padding: 0 .25rem;
   transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 .text-link-glow:hover {
-  box-shadow: inset 100px 0 0 0 #19237c;
+  box-shadow: inset 100px 0 0 0 #3340b6;
   color: white;
 }
+
+.text-link-underline {
+  position: relative;
+  color: #497ddb;
+  text-decoration: none;
+}
+
+.text-link-underline:hover {
+  color: #497ddb;
+}
+
+.text-link-underline::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #497ddb;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.text-link-underline:hover::before {
+  transform: scaleX(1);
+}
+
+
 
 .color-blue {
   color: #1673ff;
@@ -613,6 +642,14 @@ h6 {
 
 .color-linear {
   background: linear-gradient(90deg, rgb(14, 165, 234), rgb(11, 209, 209) 51%, rgb(14, 165, 234)) var(--x, 0)/200%;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-fill-color: transparent;
+}
+
+.color-linear-2 {
+  background: linear-gradient(90deg, rgb(74, 128, 245), rgb(131, 168, 250), rgb(181, 187, 204)) var(--x, 0)/200%;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
@@ -858,7 +895,7 @@ h6 {
 }
 
 .typewrite {
-  margin-left: 15px;
+  margin-left: 0px;
 }
 
 .hover-neon {
@@ -1378,6 +1415,21 @@ a.text-brand-3:hover {
   vertical-align: middle;
   display: inline-block;
 }
+.btn.btn-linear-2 {
+  background: rgb(33, 93, 223);
+  background: linear-gradient(90deg, rgb(33, 93, 223), rgb(88, 129, 218), rgb(181, 187, 204)) var(--x, 0)/200%;
+  color: #ffffff;
+  transition: 0.5s;
+}
+.btn.btn-linear-2:hover {
+  --x: 100%;
+  color: #ffffff !important;
+  transition: 0.5s;
+}
+.btn.btn-linear-2 i {
+  vertical-align: middle;
+  display: inline-block;
+}
 .btn.btn-linear-small {
   background: rgb(14, 165, 234);
   background: linear-gradient(90deg, rgb(14, 165, 234), rgb(11, 209, 209) 51%, rgb(14, 165, 234)) var(--x, 0)/200%;
@@ -1389,6 +1441,20 @@ a.text-brand-3:hover {
   color: #66768F !important;
 }
 .btn.btn-linear-small i {
+  vertical-align: middle;
+  display: inline-block;
+}
+.btn.btn-linear-small-2 {
+  background: rgb(33, 93, 223);
+  background: linear-gradient(90deg, rgb(33, 93, 223), rgb(88, 129, 218), rgb(181, 187, 204)) var(--x, 0)/200%;
+  color: #ffffff;
+  padding: 6px 24px;
+  border-radius: 50px;
+}
+.btn.btn-linear-small-2:hover {
+  color: #66768F !important;
+}
+.btn.btn-linear-small-2 i {
   vertical-align: middle;
   display: inline-block;
 }
@@ -5369,6 +5435,7 @@ input {
   background: linear-gradient(#222F43, #222F43) padding-box, linear-gradient(to right, rgb(14, 165, 234), rgb(11, 209, 209)) border-box;
   border-radius: 8px;
   border: 1px solid transparent;
+  transition: box-shadow 0.5s ease-in-out;
 }
 .box-subscriber .inner-subscriber:hover {
   box-shadow: rgba(11, 209, 209, 0.2) 0px 3px 20px;

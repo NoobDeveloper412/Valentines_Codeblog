@@ -18,7 +18,7 @@ export default function Home() {
                                             <h2 className="color-gray-50 mt-20 mb-20 wow animate__animated animate__fadeInUp">
                                                 <Typewriter
                                                     options={{
-                                                        wrapperClassName:"typewrite color-linear",
+                                                        wrapperClassName:"typewrite color-linear-2",
                                                         strings: ['Valentin Cavarec', 'Développeur', 'Spécialisé en IA'],
                                                         autoStart: true,
                                                         loop: true,
@@ -29,7 +29,7 @@ export default function Home() {
                                                 <div className="col-lg-9">
                                                     <p className="text-base color-gray-600 wow animate__animated animate__fadeInUp">
                                                         Ingénieur Spécialisé en Intelligence Artificielle
-                                                        Actuellement CTO  @  <a class="text-sm-bold text-link-glow wow animate__animated animate__fadeInUp" href="https://seza.ai"><span class="color-white">Seza</span><span class="color-blue">ia</span></a>
+                                                        Actuellement CTO  @  <a class="text-sm-bold text-link-underline wow animate__animated animate__fadeInUp" href="https://seza.ai"><span class="color-white">Seza</span><span class="color-blue">ia</span></a>
                                                     </p>
                                                 </div>
                                             </div>
@@ -37,7 +37,7 @@ export default function Home() {
                                                 <div className="inner-subscriber bg-gray-800">
                                                     <form className="d-flex" action="#">
                                                         <input className="input-sybscriber" type="text" placeholder="Votre adresse e-mail ..." />
-                                                        <button className="btn btn-linear btn-arrow-right">S'abonner<i className="fi-rr-arrow-small-right" /></button>
+                                                        <button className="btn btn-linear-2 btn-arrow-right">S'abonner<i className="fi-rr-arrow-small-right" /></button>
                                                     </form>
                                                 </div>
                                             </div>

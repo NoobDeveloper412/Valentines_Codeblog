@@ -43,7 +43,7 @@ const HotTopic = () => {
         <>
             <div className="row">
                 <div className="col-lg-2">
-                    <h5 className="mb-15 color-white wow animate__animated animate__fadeInUp" data-wow-delay="0s">Catégories</h5>
+                    <h5 className="mb-15 color-linear-2 wow animate__animated animate__fadeInUp" data-wow-delay="0s">Catégories</h5>
                     <p className="color-gray-500 mb-20 wow animate__animated animate__fadeInUp" data-wow-delay=".3s">Chaque article partage une compétence acquise dans le cadre d'un projet.</p>
                     <div className="box-buttons-slider position-relative wow animate__animated animate__zoomIn">
                         <div className="swiper-button-prev swiper-button-prev-style-1" />

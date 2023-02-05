@@ -19,7 +19,7 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
             <header className={scroll ? "header sticky-bar bg-gray-900 stick" : "header sticky-bar bg-gray-900"}>
                 <div className="container">
                     <div className="main-header">
-                        <div className="header-logo"><Link className="d-flex" href="/"><img alt="GenZ" src="/assets/imgs/template/logo.svg" /></Link></div>
+                        <div className="header-logo"><Link className="d-flex" href="/"><img alt="GenZ" src="/assets/imgs/template/logo.png" /></Link></div>
                         <div className="header-nav">
                             <nav className="nav-main-menu d-none d-xl-block">
                                 <ul className="main-menu">
@@ -90,7 +90,7 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
                                     <Link className="color-gray-600 mr-10 font-xs" href="#"># Lifestyle</Link>
                                     <Link className="color-gray-600 mr-10 font-xs" href="#"># Sport</Link>
                                 </div>
-                            </div><Link className="btn btn-linear d-none d-sm-inline-block hover-up hover-shadow" href="/page-login">Subscribe</Link>
+                            </div><Link className="btn btn-linear-2 d-none d-sm-inline-block hover-up hover-shadow" href="/page-login">S'abonner</Link>
                         </div>
                     </div>
                 </div>
