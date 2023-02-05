@@ -13,7 +13,7 @@ const HotTopic = () => {
             link: "blog-archive",
         },
         {
-            title: "IA",
+            title: "Artificial Intelligence",
             article: 63,
             img: "AI.png",
             link: "blog-archive-2",

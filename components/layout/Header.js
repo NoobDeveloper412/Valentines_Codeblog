@@ -70,7 +70,7 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
                                     <Link className="color-gray-600 mr-10 font-xs" href="#"># Lifestyle</Link>
                                     <Link className="color-gray-600 mr-10 font-xs" href="#"># Sport</Link>
                                 </div>
-                            </div><Link className="btn btn-linear-2 d-none d-sm-inline-block hover-up hover-shadow" href="/page-login">S'abonner</Link>
+                            </div><Link className="btn btn-linear-2 d-none d-sm-inline-block hover-up hover-shadow" href="/page-login">Subscribe</Link>
                         </div>
                     </div>
                 </div>
