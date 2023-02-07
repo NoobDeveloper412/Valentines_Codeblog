@@ -24,25 +24,25 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
                             <nav className="nav-main-menu d-none d-xl-block">
                                 <ul className="main-menu">
                                     <li className='home-btn header-underline'><Link className="active" href="/">Home</Link></li>
-                                    <li className="header-underline"><Link class="color-gray-500" href="/page-about">About Me </Link></li>
+                                    <li className="header-underline"><Link class="color-gray-500" href="/about">About Me </Link></li>
                                     <li className="has-children header-underline"><Link className="color-gray-500" href="#">Code </Link>
                                         <ul className="sub-menu two-col">
-                                            <li><Link className="color-gray-500" href="/blog-archive">Python</Link></li>
-                                            <li><Link className="color-gray-500" href="/blog-archive-2">JS</Link></li>
+                                            <li><Link className="color-gray-500" href="/python">Python</Link></li>
+                                            <li><Link className="color-gray-500" href="/js">JS</Link></li>
                                         </ul>
                                     </li>
                                     <li className="has-children header-underline"><Link className="color-gray-500" href="#">System </Link>
                                         <ul className="sub-menu two-col">
-                                            <li><Link className="color-gray-500" href="/single-sidebar">Linux</Link></li>
-                                            <li><Link className="color-gray-500" href="/single-no-sidebar">NVIDIA Jetson</Link></li>
-                                            <li><Link className="color-gray-500" href="/single-center">Windows</Link></li>
+                                            <li><Link className="color-gray-500" href="/linux">Linux</Link></li>
+                                            <li><Link className="color-gray-500" href="/jetson">NVIDIA Jetson</Link></li>
+                                            <li><Link className="color-gray-500" href="/windows">Windows</Link></li>
                                         </ul>   
                                     </li>
                                     <li className="has-children header-underline"><Link className="color-gray-500" href="#">Articles </Link>
                                         <ul className="sub-menu two-col">
-                                            <li><Link className="color-gray-500" href="/page-about">AI</Link></li>
-                                            <li><Link className="color-gray-500" href="/page-author">Software</Link></li>
-                                            <li><Link className="color-gray-500" href="/page-contact">Hardware</Link></li>
+                                            <li><Link className="color-gray-500" href="/ai">AI</Link></li>
+                                            <li><Link className="color-gray-500" href="/software">Software</Link></li>
+                                            <li><Link className="color-gray-500" href="/hardware">Hardware</Link></li>
                                         </ul>
                                     </li>
                                     <li className='header-underline'><Link className="color-gray-500" href="/page-contact">Contact</Link></li>
