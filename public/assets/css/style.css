@@ -857,6 +857,12 @@ h6 {
   border-bottom-style: solid !important;
 }
 
+.border-right {
+  border-right-width: 1px !important;
+  border-right-style: solid !important;
+  border-color: gray;
+}
+
 .item-cats {
   display: flex;
   width: 100%;
@@ -3789,14 +3795,19 @@ input {
 .footer .icon-socials.icon-discord {
   background: url(../imgs/template/icons/discord.svg) no-repeat 0px 0px;
   transition-duration: 0.2s;
-  height: auto;
-  width: 8px;
+  height: 16px;
+  width: auto;
 }
 .footer .icon-socials.icon-discord:hover {
   background: url(../imgs/template/icons/discord-hover.svg) no-repeat 0px 0px;
   transition-duration: 0.2s;
+  height: 16px;
+  width: auto;
+}
+
+.footer .logo{
+  width: 90%;
   height: auto;
-  width: 8px;
 }
 
 .footer .menu-footer {
