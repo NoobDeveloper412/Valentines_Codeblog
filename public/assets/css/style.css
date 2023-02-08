@@ -1987,6 +1987,7 @@ input {
   margin-bottom: 30px;
   border: 1px solid #222F43;
   background-color: #131C31;
+  transition: filter 0.3s ease-in-out;
 }
 .card-blog-1 .card-image {
   position: relative;
@@ -2003,6 +2004,9 @@ input {
 }
 .card-blog-1:hover h4.color-white {
   color: #1CC2E7 !important;
+}
+.card-blog-1:hover{
+  filter: drop-shadow(0 0 0.8rem rgba(36, 94, 255, 0.2))
 }
 
 .card-blog-2 {
