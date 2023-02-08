@@ -67,28 +67,7 @@ const Sidebar = ({ openClass }) => {
                                     </ul>
                                 </nav>
                             </div>
-                            <div className="mobile-account border-gray-800">
-                                <div className="mobile-header-top bg-gray-900">
-                                    <div className="user-account"><Link href="/page-login"><img src="assets/imgs/template/ava.jpg" alt="GenZ" /></Link>
-                                        <div className="content">
-                                            <h6 className="user-name color-white">Hello<span className="color-white"> Steven !</span>
-                                            </h6>
-                                            <p className="font-xs text-muted">You have 3 new messages</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <ul className="mobile-menu">
-                                    <li><Link href="/page-login">Profile</Link></li>
-                                    <li><Link href="/page-login">Articles Saved</Link></li>
-                                    <li><Link href="/page-login">Add new post</Link></li>
-                                    <li><Link href="/page-login">My Likes</Link></li>
-                                    <li><Link href="/page-login">Account Setting</Link></li>
-                                    <li><Link href="/page-login">Sign out</Link></li>
-                                </ul>
-                            </div>
-                            <div className="site-copyright color-gray-400 mt-30">Copyright 2022 © Genz - Personal Blog
-                                Template.<br />Designed by<Link href="http://alithemes.com" target="_blank">&nbsp; AliThemes</Link>
-                            </div>
+                            <div className="site-copyright color-gray-400 mt-30">Made by Valentin Cavarec</div>
                         </div>
                     </div>
                 </div>
