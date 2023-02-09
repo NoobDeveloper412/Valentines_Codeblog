@@ -18,22 +18,10 @@ async function getContent(path) {
 }
 
 const BlogDetails = ({frontmatter, content}) => {
-
-    let Router = useRouter()
-
-    const [blogPost, setBlogPost] = useState(null);
-
-    const { "category": category, "slug": slug } = Router.query;
-
-    useEffect(() => {
-        setBlogPost(data.find((data) => data.category == category & data.slug == slug));
-    }, [category, slug]);
-
+    
     return (
         <>
             <Layout>
-
-                {blogPost && (
                     <>
                         <div className="cover-home3">
                             <div className="container">
@@ -46,17 +34,17 @@ const BlogDetails = ({frontmatter, content}) => {
                                                     <li>
                                                         <Link className="home" href="/">Home</Link></li>
                                                     <li>
-                                                        <Link href={"/" + blogPost.category}>{blogPost.category_title}</Link></li>
-                                                    <li><span>{blogPost.title}</span></li>
+                                                        <Link href={"/" + frontmatter.category}>{frontmatter.category_title}</Link></li>
+                                                    <li><span>{frontmatter.title}</span></li>
                                                 </ul>
                                             </div>
                                         </div>
                                         <div className="row mt-50 align-items-end">
                                             <div className="col-lg-9 col-md-8">
-                                                <h2 className="color-linear mb-30">{blogPost.title} </h2>
+                                                <h2 className="color-linear mb-30">{frontmatter.title} </h2>
                                                 <div className="box-author mb-20"><img src="/assets/imgs/page/about/author.png" alt="Genz" />
                                                     <div className="author-info">
-                                                        <h6 className="color-linear-2">{blogPost.author}</h6><span className="color-gray-700 text-sm mr-30">{blogPost.date}</span><span className="color-gray-700 text-sm">{blogPost.ttr} to read</span>
+                                                        <h6 className="color-linear-2">{frontmatter.author}</h6><span className="color-gray-700 text-sm mr-30">{frontmatter.date}</span><span className="color-gray-700 text-sm">{frontmatter.ttr} to read</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -64,22 +52,22 @@ const BlogDetails = ({frontmatter, content}) => {
                                                 <div className="box-share border-gray-800">
                                                     <h6 className="d-inline-block color-gray-500 mr-10">Share</h6>
                                                     <span className="btns-share">
-                                                        <FacebookShareButton url = { "https://vcavarec.com/" + blogPost.category + "/" + blogPost.slug } quote = { blogPost.shortdesc }>
+                                                        <FacebookShareButton url = { "https://vcavarec.com/" + frontmatter.category + "/" + frontmatter.slug } quote = { frontmatter.shortdesc }>
                                                             <FacebookIcon size={32} round/>
                                                         </FacebookShareButton>
                                                     </span>
                                                     <span className="btns-share">
-                                                        <TwitterShareButton url = { "https://vcavarec.com/" + blogPost.category + "/" + blogPost.slug } title = { blogPost.title }>
+                                                        <TwitterShareButton url = { "https://vcavarec.com/" + frontmatter.category + "/" + frontmatter.slug } title = { frontmatter.title }>
                                                             <TwitterIcon size={32} round/>
                                                         </TwitterShareButton>
                                                     </span>
                                                     <span className="btns-share">
-                                                        <LinkedinShareButton url = { "https://vcavarec.com/" + blogPost.category + "/" + blogPost.slug }>
+                                                        <LinkedinShareButton url = { "https://vcavarec.com/" + frontmatter.category + "/" + frontmatter.slug }>
                                                             <LinkedinIcon size={32} round/>
                                                         </LinkedinShareButton>
                                                     </span>
                                                     <span className="btns-share">
-                                                        <RedditShareButton url = { "https://vcavarec.com/" + blogPost.category + "/" + blogPost.slug } title = { blogPost.title }>
+                                                        <RedditShareButton url = { "https://vcavarec.com/" + frontmatter.category + "/" + frontmatter.slug } title = { frontmatter.title }>
                                                             <RedditIcon size={32} round/>
                                                         </RedditShareButton>
                                                     </span>
@@ -89,6 +77,7 @@ const BlogDetails = ({frontmatter, content}) => {
                                         <div className="row mt-50">
                                             <div className="col-lg-8">
                                                 <div className="content-detail border-gray-800">
+                                                    {frontmatter.title}
                                                     <ReactMarkdown>{content}</ReactMarkdown>
                                                 </div>
                                             </div>
@@ -303,7 +292,6 @@ const BlogDetails = ({frontmatter, content}) => {
                         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
                     </>
-                )}
             </Layout>
         </>
     );

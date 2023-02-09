@@ -1,13 +1,15 @@
 ---
-__Advertisement :)__
-
-- __[pica](https://nodeca.github.io/pica/demo/)__ - high quality and fast image
-  resize in browser.
-- __[babelfish](https://github.com/nodeca/babelfish/)__ - developer friendly
-  i18n with plurals support and easy syntax.
-
-You will like those projects!
-
+id: 1
+title: 'Dynamic Routing and Static Generation'
+shortdesc: "You can implement this simple approach in your Python projects in under 5 minutes."
+category: 'python'
+category_title: 'Python'
+slug: 'python-multithreading'
+img: "news1.png"
+date: "February 7, 2023"
+author: Valentin Cavarec
+ttr: "5min"
+difficulty: "Easy"
 ---
 
 # h1 Heading 8-)
