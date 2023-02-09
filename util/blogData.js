@@ -11,6 +11,7 @@ const data = [
         ttr: "5min",
         shortdesc: "You can implement this simple approach in your Python projects in under 5 minutes.",
         difficulty: "Easy",
+        path: "../../_content/python/python-multithreading.md"
     },
     {
         id: 1,
