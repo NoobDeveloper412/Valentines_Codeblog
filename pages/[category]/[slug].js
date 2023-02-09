@@ -354,8 +354,8 @@ export function getServerSidePaths() {
   }*/
 
 
-export function getServerSideProps(context) {
-    const fileName = readFileSync(`content/${context.query.category}/${context.query.slug}.md`, 'utf-8');
+export async function getServerSideProps(context) {
+    const fileName = await readFile(`content/${context.query.category}/${context.query.slug}.md`, 'utf-8');
     const { data: frontmatter, content } = matter(fileName);
     return {
       props: {
