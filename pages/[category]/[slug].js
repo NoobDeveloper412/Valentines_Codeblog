@@ -6,7 +6,7 @@ import Layout from "../../components/layout/Layout";
 import data from "../../util/blogData";
 import { FacebookShareButton, FacebookIcon, LinkedinShareButton, LinkedinIcon, TwitterIcon, TwitterShareButton, RedditShareButton, RedditIcon } from "next-share";
 import matter from "gray-matter";
-import { readFile } from "fs";
+import { readFileSync } from "fs";
 
 async function getContent(path) {
     const file = await unified()
@@ -355,7 +355,7 @@ export function getServerSidePaths() {
 
 
 export async function getServerSideProps(context) {
-    const fileName = await readFile(`content/${context.query.category}/${context.query.slug}.md`, 'utf-8');
+    const fileName = readFileSync(`content/${context.query.category}/${context.query.slug}.md`, 'utf-8');
     const { data: frontmatter, content } = matter(fileName);
     return {
       props: {
