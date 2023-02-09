@@ -1,10 +1,10 @@
 ---
 id: 1
-title: 'Easy approach to Python multithreading'
+title: 'Routing is bad'
 shortdesc: "You can implement this simple approach in your Python projects in under 5 minutes."
-category: 'python'
-category_title: 'Python'
-slug: 'python-multithreading'
+category: 'js'
+category_title: 'JS'
+slug: 'js-routing'
 date: "February 7, 2023"
 author: Valentin Cavarec
 ttr: "5min"
@@ -12,6 +12,6 @@ difficulty: "Easy"
 ---
 
 # h1 Heading 8-)
-`class superDevPython()`
+`class superDevJS()`
 
   - `def __init__():`

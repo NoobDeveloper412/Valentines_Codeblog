@@ -285,6 +285,51 @@ const BlogDetails = ({frontmatter, content}) => {
     );
 };
 
+/*const postsDirectory = path.join(process.cwd(), 'content');
+
+export function getDirectories(postsDirectory) {
+  return readdirSync(postsDirectory, { withFileTypes: true }).filter((dirent) => dirent.isDirectory()).map((dirent) => dirent.name);
+}
+
+export function getAllFiles() {
+  const test = getDirectories(postsDirectory);
+  let table = [];
+  for (const folder of test) {
+    const subfolder = path.join(postsDirectory, folder);
+    readdirSync(subfolder).forEach(file => {
+        table.push({ file: file, folder: folder });
+    });
+  }
+  return table;
+}
+
+export function testFiles() {
+    readdirSync(postsDirectory, (err, files) => {
+    files.forEach(file => {
+        console.log(file);
+    });
+    });
+}
+
+
+export function getServerSidePaths() {
+    const t = getAllFiles();
+    console.log(t);
+    const paths = t.map((f) => (
+        {
+        params: {
+            category: f.folder,
+            slug: f.file,
+        },
+    }));
+    console.log(paths);
+    return {
+        paths,
+        fallback: false,
+    };
+  }*/
+
+
 export async function getServerSideProps(context) {
     const fileName = readFileSync(`content/${context.query.category}/${context.query.slug}.md`, 'utf-8');
     const { data: frontmatter, content } = matter(fileName);

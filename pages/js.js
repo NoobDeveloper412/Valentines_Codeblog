@@ -35,9 +35,10 @@ export default function Home( {pages} ) {
                                 <div className="row align-items-end mt-50">
                                     <div className="col-lg-7 mb-20">
                                         <div className="d-inline-block position-relative">
-                                            <h1 className="color-white mb-20 color-linear wow animate__animated animate__fadeIn">Python</h1><span className="btn btn-linear-small btn-number-arts">{pages.length} Articles</span>
+                                            <h1 className="color-white mb-20 color-linear wow animate__animated animate__fadeIn">JavaScript</h1><span className="btn btn-linear-small btn-number-arts">{pages.length} Articles</span>
                                         </div>
-                                        <p className="color-gray-500 text-base wow animate__animated animate__fadeIn">Simple guides and code snippets about Python programming language.</p>
+                                        <p className="color-gray-500 text-base wow animate__animated animate__fadeIn">Simple guides and code snippets about JavaScript programming language and frameworks.
+                                        <br/>Spoiler alert : I'm struggling with this language and won't be great help.</p>
                                     </div>
                                     <div className="col-lg-5 mb-20 text-start text-lg-end">
                                         <div className="box-breadcrumbs wow animate__animated animate__fadeIn">
