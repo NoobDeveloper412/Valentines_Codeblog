@@ -1,13 +1,12 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import ReactMarkdown from 'react-markdown'
 import Layout from "../../components/layout/Layout";
 import data from "../../util/blogData";
 import { FacebookShareButton, FacebookIcon, LinkedinShareButton, LinkedinIcon, TwitterIcon, TwitterShareButton, RedditShareButton, RedditIcon } from "next-share";
 import matter from "gray-matter";
-import path from 'path';
-import { readFileSync, readdirSync } from "fs";
-import { readdir } from 'fs/promises';
+import { readFileSync } from "fs";
 
 async function getContent(path) {
     const file = await unified()
@@ -18,7 +17,7 @@ async function getContent(path) {
     return file
 }
 
-const BlogDetails = ({content}) => {
+const BlogDetails = ({frontmatter, content}) => {
 
     let Router = useRouter()
 
@@ -90,7 +89,7 @@ const BlogDetails = ({content}) => {
                                         <div className="row mt-50">
                                             <div className="col-lg-8">
                                                 <div className="content-detail border-gray-800">
-                                                    {content}
+                                                    <ReactMarkdown>{content}</ReactMarkdown>
                                                 </div>
                                             </div>
                                             <div className="col-lg-4">
@@ -310,7 +309,7 @@ const BlogDetails = ({content}) => {
     );
 };
 
-const postsDirectory = path.join(process.cwd(), 'content');
+/*const postsDirectory = path.join(process.cwd(), 'content');
 
 export function getDirectories(postsDirectory) {
   return readdirSync(postsDirectory, { withFileTypes: true }).filter((dirent) => dirent.isDirectory()).map((dirent) => dirent.name);
@@ -321,32 +320,42 @@ export function getAllFiles() {
   let table = [];
   for (const folder of test) {
     const subfolder = path.join(postsDirectory, folder);
-    let files = readdirSync(subfolder);
-    for (const file of files) {
-      table.push({ file: file, folder: folder });
-    }
+    readdirSync(subfolder).forEach(file => {
+        table.push({ file: file, folder: folder });
+    });
   }
   return table;
 }
 
-export async function getStaticPaths() {
+export function testFiles() {
+    readdirSync(postsDirectory, (err, files) => {
+    files.forEach(file => {
+        console.log(file);
+    });
+    });
+}
+
+
+export function getServerSidePaths() {
     const t = getAllFiles();
-    console.log(t)
-    const paths = t.map((files, folders) => ({
+    console.log(t);
+    const paths = t.map((f) => (
+        {
         params: {
-            category: files,
-            slug: folders,
-        }
+            category: f.folder,
+            slug: f.file,
+        },
     }));
+    console.log(paths);
     return {
         paths,
         fallback: false,
     };
-  }
+  }*/
 
 
-  export async function getStaticProps({ params: { category, slug } }) {
-    const fileName = readFileSync(`content/${category}/${slug}.md`, 'utf-8');
+export function getServerSideProps(context) {
+    const fileName = readFileSync(`content/${context.query.category}/${context.query.slug}.md`, 'utf-8');
     const { data: frontmatter, content } = matter(fileName);
     return {
       props: {
@@ -355,6 +364,5 @@ export async function getStaticPaths() {
       },
     };
   }
-
 
 export default BlogDetails;
