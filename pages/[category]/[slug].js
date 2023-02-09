@@ -6,7 +6,7 @@ import Layout from "../../components/layout/Layout";
 import data from "../../util/blogData";
 import { FacebookShareButton, FacebookIcon, LinkedinShareButton, LinkedinIcon, TwitterIcon, TwitterShareButton, RedditShareButton, RedditIcon } from "next-share";
 import matter from "gray-matter";
-import { readFileSync } from "fs";
+import { readFile } from "fs";
 
 async function getContent(path) {
     const file = await unified()
