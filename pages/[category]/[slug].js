@@ -1,24 +1,12 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
 import ReactMarkdown from 'react-markdown'
 import Layout from "../../components/layout/Layout";
-import data from "../../util/blogData";
 import { FacebookShareButton, FacebookIcon, LinkedinShareButton, LinkedinIcon, TwitterIcon, TwitterShareButton, RedditShareButton, RedditIcon } from "next-share";
 import matter from "gray-matter";
 import { readFileSync } from "fs";
 
-async function getContent(path) {
-    const file = await unified()
-    .use(remarkParse)
-    .use(remarkHtml)
-    .process(await read(path))
-
-    return file
-}
-
 const BlogDetails = ({frontmatter, content}) => {
-    
+
     return (
         <>
             <Layout>
@@ -296,51 +284,6 @@ const BlogDetails = ({frontmatter, content}) => {
         </>
     );
 };
-
-/*const postsDirectory = path.join(process.cwd(), 'content');
-
-export function getDirectories(postsDirectory) {
-  return readdirSync(postsDirectory, { withFileTypes: true }).filter((dirent) => dirent.isDirectory()).map((dirent) => dirent.name);
-}
-
-export function getAllFiles() {
-  const test = getDirectories(postsDirectory);
-  let table = [];
-  for (const folder of test) {
-    const subfolder = path.join(postsDirectory, folder);
-    readdirSync(subfolder).forEach(file => {
-        table.push({ file: file, folder: folder });
-    });
-  }
-  return table;
-}
-
-export function testFiles() {
-    readdirSync(postsDirectory, (err, files) => {
-    files.forEach(file => {
-        console.log(file);
-    });
-    });
-}
-
-
-export function getServerSidePaths() {
-    const t = getAllFiles();
-    console.log(t);
-    const paths = t.map((f) => (
-        {
-        params: {
-            category: f.folder,
-            slug: f.file,
-        },
-    }));
-    console.log(paths);
-    return {
-        paths,
-        fallback: false,
-    };
-  }*/
-
 
 export async function getServerSideProps(context) {
     const fileName = readFileSync(`content/${context.query.category}/${context.query.slug}.md`, 'utf-8');
