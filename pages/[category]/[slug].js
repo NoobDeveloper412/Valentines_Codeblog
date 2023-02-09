@@ -4,8 +4,16 @@ import Layout from "../../components/layout/Layout";
 import { FacebookShareButton, FacebookIcon, LinkedinShareButton, LinkedinIcon, TwitterIcon, TwitterShareButton, RedditShareButton, RedditIcon } from "next-share";
 import matter from "gray-matter";
 import { readFileSync } from "fs";
+import { useRouter } from "next/router";
 
 const BlogDetails = ({frontmatter, content}) => {
+    let Router = useRouter()
+
+    const [blogPost, setBlogPost] = useState(null);
+    const { "category": category, "slug": slug } = Router.query;
+    useEffect(() => {
+        setBlogPost(data.find((data) => data.category == category & data.slug == slug));
+    }, [category, slug]);
 
     return (
         <>
